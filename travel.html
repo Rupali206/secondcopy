@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Travel Places</title>
+     <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+    <h1>Please Find My Travelled Places Below............</h1>
+    <img id="travel" src="paris.jpg" width="120" height="120">
+    <script type='text/javascript'>
+        var reasons = [
+
+            "Iam under effel tower......parisssss",
+            "its a dream world switzerland..............",
+            "I am in Gandola ride......Venice",
+            "My first birthday in Bonn Germany........",
+            "Awesome waterfall in Spain",
+            "Boating in Amsterdam.........",
+
+        ];
+
+        var myimg = document.getElementById("travel");
+        var imgarray = ["paris.jpg", "swiss.jpg", "gandola ride.jpg", "1stbirthday.jpg", "warerfall.jpg", "boating.jpg"];
+        var i = 1;
+
+        function nextslide() {
+            myimg.setAttribute("src", imgarray[i]);
+            document.getElementById("reasontext").innerHTML = reasons[i];
+            i++;
+        }
+
+    </script>
+    <div>
+        <button type="button" onclick="nextslide()"> Next </button>
+    </div>
+    <p id="reasontext"> "First time i see world"</p>
+      <a href="index.html" >BACK </a>
+
+</body>
+
+</html>
